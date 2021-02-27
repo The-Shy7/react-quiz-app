@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 // components
 import QuestionCard from './components/QuestionCard';
 
+const TOTAL_QUESTIONS = 30;
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  // can't specify type, will create type when making 
+  // the function for the api 
+  const [questions, setQuestions] = useState([]);
+  const [number, setNumber] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(true);
+
+
   const startTrivia = async () => {
 
   }
@@ -24,7 +35,14 @@ function App() {
       </button>
       <p className="score">Score:</p>
       <p>Loading Questions...</p>
-      <QuestionCard />
+      <QuestionCard 
+        questionNum={number + 1}
+        totalQuestions={TOTAL_QUESTIONS}
+        question={questions[number].question}
+        answers={questions[number].answers}
+        userAnswer={userAnswers ? userAnswers[number] : undefined}
+        callback={checkAnswer}
+      />
       <button className="next" onClick={nextQuestion}>
         Next Question
       </button>
