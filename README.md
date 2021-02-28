@@ -1,3 +1,15 @@
+# Description
+
+This app is a quiz game where users answer 30 random multiple choice questions from a variety of topics. The score will update for each correct answer. Once all questions have been answered, the user will be prompted to start again if they choose to do so. 
+
+The API used for fetching the trivia questions: https://opentdb.com/
+
+This app was built using React and TypeScript. 
+
+Deployed using Netlify: https://scuffed-react-quiz.netlify.app/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/84f57930-7509-429a-ae1e-8c9c09e653f5/deploy-status)](https://app.netlify.com/sites/scuffed-react-quiz/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
