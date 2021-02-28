@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
     setGameOver(false);
 
-    const newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY);
+    const newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.HARD);
 
     setQuestions(newQuestions);
     setScore(0);
@@ -75,7 +75,7 @@ function App() {
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>React Quiz</h1>
+        <h1>Scuffed Quiz</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className="start" onClick={startTrivia}>
             Start
